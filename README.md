@@ -13,3 +13,4 @@
 
 ✦6) При нажатии на кнопку  "=" выполняется действие и результат выводится на дисплей .
 
+![](https://github.com/rodomod/Calculator/blob/master/Calc.PNG?raw=true)
