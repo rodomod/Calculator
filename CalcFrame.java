@@ -30,7 +30,7 @@ JButton buttonStart=new JButton("=");
 JButton buttonDiv=new JButton("Sqrt");	                    
 String operation = "+,-,*,/";
 double firstValue;
-        
+double secondValue;       
 CalcFrame(){  
    super("Calc_rodomod");
 button0.addActionListener(    
@@ -119,12 +119,11 @@ buttonDiv.addActionListener(new ActionListener(){
 	public void actionPerformed(ActionEvent e){
 		double firstValue=Double.parseDouble(display.getText());
 		double secondValue=Double.parseDouble(display.getText());
-		String Div=display.getText();
-		//Math.sqrt(this.real * this.real + this.image * this.image)
-		if(Div.indexOf("")!=0)display.setText((Math.sqrt(firstValue*firstValue+secondValue*secondValue))+"");
-		else if(Div.indexOf("")>=0)display.setText((Math.sqrt(firstValue*firstValue+secondValue*secondValue))+"");
-		else if(Div.indexOf("")<=0)display.setText((Math.sqrt(firstValue*firstValue+secondValue*secondValue))+"");
-		else if(Div.indexOf("")==0)display.setText((Math.sqrt(firstValue*firstValue+secondValue*secondValue))+"");
+		String d=display.getText();
+		if(d.indexOf("")!=0)display.setText(Math.sqrt(firstValue*secondValue/secondValue)+"");
+		else if(d.indexOf("")<0)display.setText(Math.sqrt(firstValue*secondValue/secondValue)+"");
+		else if(d.indexOf("")>0)display.setText(Math.sqrt(firstValue*secondValue/secondValue)+"");
+		else if(d.indexOf("")==0)display.setText(Math.sqrt(firstValue*secondValue/secondValue)+"");
    }
 });
 buttonPanel.add(buttonPoint);
@@ -198,8 +197,8 @@ else if("/".equals(operation)){
 			display.setText((firstValue/secondValue)+"");
 		}
 	 
-		  operation ="+,-,*,/";
-		 	 double firstValue=0.0;
+		 operation ="+,-,*,/";
+		 double firstValue=0.0;
     }
 });
 setBounds(300,300,300,300);
