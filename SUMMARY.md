@@ -1,5 +1,7 @@
 # Summary
 
-* [Introduction](README.md)
-* [CalcFrame](calcframe.md)
-* [Calc](Calc.md)
+* [Introduction](Readme.md)
+* [calc](Main.java)
+* [calc](Panel.java)
+* [calc](calc.png)
+* [LICENSE](LICENSE.md)
